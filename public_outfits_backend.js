@@ -12,7 +12,7 @@ const server = http.createServer(async (req,res)=>{
   try {
     let page=1, outfits=[];
     while(page<=5){
-      const endpoint=`https://avatar.roblox.com/v1/users/${userId}/outfits?page=${page}&itemsPerPage=100&isEditable=false`;
+      const endpoint=`https://avatar.roblox.com/v1/users/${userId}/outfits?page=${page}&itemsPerPage=100&isEditable=true`;
       const r=await fetch(endpoint,{headers:{Accept:'application/json'},signal:AbortSignal.timeout(10000)});
       if(!r.ok){res.writeHead(502);return res.end(JSON.stringify({ok:false,error:`Roblox public outfit API unavailable (HTTP ${r.status})`}));}
       const data=await r.json();
