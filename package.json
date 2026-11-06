@@ -1,0 +1,12 @@
+
+{
+  "name": "roblox-outfit-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node public_outfits_backend.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
